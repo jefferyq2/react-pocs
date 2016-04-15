@@ -15,14 +15,8 @@ class HelloWorld extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.android.js
-        </Text>
-        <Text style={styles.instructions}>
-          Shake or press menu button for dev menu
+        <Text style={styles.helloWorld}>
+          Hello World!
         </Text>
       </View>
     );
@@ -30,21 +24,16 @@ class HelloWorld extends Component {
 }
 
 const styles = StyleSheet.create({
-  container: {
+   container: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
   },
-  welcome: {
+  helloWorld: {
     fontSize: 20,
     textAlign: 'center',
     margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
   },
 });
 
