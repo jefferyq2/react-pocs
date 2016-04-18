@@ -29,7 +29,7 @@ export default class SignupScreen extends React.Component{
             if (username === VALID_USERNAME[i].username && password === VALID_USERNAME[i].password){
                 this.setState({message:''});
                 this.props.navigator.push({
-                    name: 'home',
+                    name: 'role',
                     username: username
                 });
             }

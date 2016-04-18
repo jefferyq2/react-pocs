@@ -15,13 +15,23 @@ import React, {
 
 import HomeScreen from './App/Components/HomeScreen';
 import SignupScreen from './App/Components/SignupScreen';
-import SimpleButton from './App/Components/SimpleButton'
+import RoleScreen from './App/Components/RoleScreen';
+import SimpleButton from './App/Components/SimpleButton';
 
 var NavigationBarRouteMapper = {
     LeftButton: function (route, navigator, index, navState){
         switch (route.name){
             case 'home':
                 return (
+                    <SimpleButton
+                        onPress={() => navigator.pop()}
+                        customText='Back'
+                        style={styles.navBarLeftButton}
+                        textStyle={styles.navBarButtonText}
+                    />
+                );
+             case 'role':
+               return (
                     <SimpleButton
                         onPress={() => navigator.pop()}
                         customText='Back'
@@ -48,6 +58,10 @@ var NavigationBarRouteMapper = {
                 return(
                     <Text style={styles.navBarTitleText}>Signup Page</Text>
                 );
+            case 'role':
+                return(
+                     <Text style={styles.navBarTitleText}>Role Page</Text>
+                );
         }
     }
 }
@@ -73,8 +87,16 @@ class SimpleSignup extends React.Component {
           return(
             <HomeScreen
               username = {route.username}
+               role = {route.role}
             />
-          );     
+          );  
+        case 'role':
+           return(
+             <RoleScreen
+              navigator = {navigator}
+              username = {route.username}
+             />
+           );
       }      
     }
   
