@@ -18,13 +18,16 @@ export default class SignupScreen extends React.Component{
         super(props)
         this.state={
             username:'',
-            password:''
+            password:'',
+            message:''        
         }
     }
     
     signup(username, password){
+        this.setState({message:'Login Failed'});
         for (var i=0; i < VALID_USERNAME.length; i++) {
             if (username === VALID_USERNAME[i].username && password === VALID_USERNAME[i].password){
+                this.setState({message:''});
                 this.props.navigator.push({
                     name: 'home',
                     username: username
@@ -36,9 +39,8 @@ export default class SignupScreen extends React.Component{
     render(){
         return(
             <View style={styles.container}>
-                <Text
-                    ref="message"
-                >
+                <Text style={styles.message}>
+                    {this.state.message}
                 </Text>
             
                 <TextInput 
@@ -83,7 +85,10 @@ var styles = StyleSheet.create({
         fontSize: 20,
         height: 50
     },
-      simpleButton:{
+    message:{
+        fontSize: 20,
+    },
+    simpleButton:{
         backgroundColor: '#5B29C1',  
         paddingHorizontal: 20,
         paddingVertical: 15,
