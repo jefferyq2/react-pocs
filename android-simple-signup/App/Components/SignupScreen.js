@@ -19,11 +19,11 @@ export default class SignupScreen extends React.Component{
         this.state={
             username:'',
             password:'',
-            message:''        
+            message:''          
         }
     }
     
-    signup(username, password){
+        signup(username, password){
         this.setState({message:'Login Failed'});
         for (var i=0; i < VALID_USERNAME.length; i++) {
             if (username === VALID_USERNAME[i].username && password === VALID_USERNAME[i].password){
@@ -39,20 +39,16 @@ export default class SignupScreen extends React.Component{
     render(){
         return(
             <View style={styles.container}>
-                <Text style={styles.message}>
+                 <Text style={styles.message}>
                     {this.state.message}
                 </Text>
-            
                 <TextInput 
-                    ref = "username"
-                    autoFocus={true}
                     style={styles.textInput}
                     placeholder='username'
                     onChangeText={(username) => this.setState({username})}
                  />
                     
                 <TextInput
-                    ref="password"
                     style={styles.textInput}
                     placeholder='password'
                     onChangeText={(password) => this.setState({password})}
@@ -62,13 +58,13 @@ export default class SignupScreen extends React.Component{
                     style={styles.simpleButton}
                     textStyle={styles.simpleButtonText}
                     customText='Sign Up'
-                    onPress={() => this.signup(this.state.username, this.state.password)}
+                     onPress={() => this.signup(this.state.username, this.state.password)}
                 />
                 
                 <Text style = {styles.textInfo}>
                     Valid Usernames & Passwords : zul & password, jules & password, admin & password
-                </Text>
-                
+                </Text> 
+               
             </View>
         );
     }

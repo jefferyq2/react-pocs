@@ -20,7 +20,7 @@ import SimpleButton from './App/Components/SimpleButton';
 
 var NavigationBarRouteMapper = {
     LeftButton: function (route, navigator, index, navState){
-        switch (route.name){
+      switch (route.name){
             case 'home':
                 return (
                     <SimpleButton
@@ -43,18 +43,18 @@ var NavigationBarRouteMapper = {
                 return null;
         }    
     },
-    
+     
     RightButton: function (route, navigator, index, navState){
    
     },
     
     Title: function (route, navigator, index, navState){
-        switch (route.name){
+      switch (route.name){
             case 'signup':
                 return(
                     <Text style={styles.navBarTitleText}>Home Page</Text>
                 );   
-            case 'home':
+                 case 'home':
                 return(
                     <Text style={styles.navBarTitleText}>Signup Page</Text>
                 );
@@ -76,24 +76,21 @@ class SimpleSignup extends React.Component {
       switch(route.name){
         case 'signup' :
           return (
-            <SignupScreen 
-              navigator = {navigator}
-              onPress = {() => navigator.push({
-                name: 'home'
-              })}
+            <SignupScreen
+              navigator={navigator}  
             />
-          );
-        case 'home' :
+          ); 
+          case 'home' :
           return(
             <HomeScreen
               username = {route.username}
                role = {route.role}
             />
           );  
-        case 'role':
+            case 'role':
            return(
              <RoleScreen
-              navigator = {navigator}
+              navigator = {navigator}   
               username = {route.username}
              />
            );

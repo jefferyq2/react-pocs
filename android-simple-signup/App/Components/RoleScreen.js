@@ -19,7 +19,7 @@ export default class RoleScreen extends React.Component{
                         style={styles.simpleButton}
                         textStyle={styles.simpleButtonText}
                         customText='Merchant'
-                        onPress={() => this.props.navigator.push({
+                            onPress={() => this.props.navigator.push({
                             name:'home',
                             username:this.props.username,
                             role:'Merchant'})}
@@ -30,7 +30,7 @@ export default class RoleScreen extends React.Component{
                             style={styles.simpleButton}
                             textStyle={styles.simpleButtonText}
                             customText='Freelancer'
-                            onPress={() => this.props.navigator.push({
+                           onPress={() => this.props.navigator.push({
                                 name:'home', 
                                 username:this.props.username,
                                 role:'Freelancer'})}
