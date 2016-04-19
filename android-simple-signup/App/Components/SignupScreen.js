@@ -42,13 +42,17 @@ export default class SignupScreen extends React.Component{
                  <Text style={styles.message}>
                     {this.state.message}
                 </Text>
-                <TextInput 
+                
+               <TextInput 
+                    ref = "username"
+                    autoFocus={true}
                     style={styles.textInput}
                     placeholder='username'
                     onChangeText={(username) => this.setState({username})}
                  />
                     
                 <TextInput
+                    ref="password"
                     style={styles.textInput}
                     placeholder='password'
                     onChangeText={(password) => this.setState({password})}

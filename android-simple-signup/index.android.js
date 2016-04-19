@@ -19,7 +19,7 @@ import RoleScreen from './App/Components/RoleScreen';
 import SimpleButton from './App/Components/SimpleButton';
 
 var NavigationBarRouteMapper = {
-    LeftButton: function (route, navigator, index, navState){
+    LeftButton:(route, navigator, index, navState) =>{
       switch (route.name){
             case 'home':
                 return (
@@ -44,11 +44,11 @@ var NavigationBarRouteMapper = {
         }    
     },
      
-    RightButton: function (route, navigator, index, navState){
+    RightButton:(route, navigator, index, navState) =>{
    
     },
     
-    Title: function (route, navigator, index, navState){
+    Title:(route, navigator, index, navState) =>{
       switch (route.name){
             case 'signup':
                 return(
