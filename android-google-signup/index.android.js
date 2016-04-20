@@ -28,7 +28,8 @@ class GoogleSignup extends Component {
    componentDidMount() {
     GoogleSignin.configure({
       scopes: [],
-      webClientId: '30028181111-od252d2bsnarhubddjcqodoheq0ainm5.apps.googleusercontent.com',
+      //webClientId: '859208345663-gbg1h6hvr934pi77auusmq0jjkvvlg9d.apps.googleusercontent.com',
+      webClientId:'859208345663-roftlj4paprvbve6o73d9mml51dtcne5.apps.googleusercontent.com',
       offlineAccess: true
     });
 

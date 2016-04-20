@@ -1,58 +1,13 @@
 {
   "project_info": {
-    "project_id": "buoyant-climate-128605",
-    "project_number": "30028181111",
+    "project_id": "leafy-mender-128703",
+    "project_number": "859208345663",
     "name": "GoogleSignup"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:30028181111:android:1748658d92ba4e59",
-        "client_id": "android:com.signup.google",
-        "client_type": 1,
-        "android_client_info": {
-          "package_name": "com.signup.google",
-          "certificate_hash": []
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "30028181111-bvmnfrqf5m375nklv65n8rugm8tveqlk.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.signup.google",
-            "certificate_hash": "B69268B83BDBC119E950A0231EC30A2EADE0266D"
-          }
-        },
-        {
-          "client_id": "30028181111-phnpsgkfi3cmjc9bc3dm6ju803jmlmrv.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [],
-      "services": {
-        "analytics_service": {
-          "status": 1
-        },
-        "cloud_messaging_service": {
-          "status": 1,
-          "apns_config": []
-        },
-        "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
-        },
-        "google_signin_service": {
-          "status": 2
-        },
-        "ads_service": {
-          "status": 1
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:30028181111:android:07babc1ab4c66864",
+        "mobilesdk_app_id": "1:859208345663:android:07babc1ab4c66864",
         "client_id": "android:com.googlesignup",
         "client_type": 1,
         "android_client_info": {
@@ -62,7 +17,7 @@
       },
       "oauth_client": [
         {
-          "client_id": "30028181111-od252d2bsnarhubddjcqodoheq0ainm5.apps.googleusercontent.com",
+          "client_id": "859208345663-gbg1h6hvr934pi77auusmq0jjkvvlg9d.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.googlesignup",
@@ -70,7 +25,7 @@
           }
         },
         {
-          "client_id": "30028181111-phnpsgkfi3cmjc9bc3dm6ju803jmlmrv.apps.googleusercontent.com",
+          "client_id": "859208345663-roftlj4paprvbve6o73d9mml51dtcne5.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
