@@ -1,0 +1,32 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "CE4C6939770CB9C511A6FE216A04AE5308E50B9D",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "8af9dae8-c72c-054d-927d-2fcf4f1c3c81++505" : {
+
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "8af9dae8-c72c-054d-927d-2fcf4f1c3c81++505" : 0,
+    "CE4C6939770CB9C511A6FE216A04AE5308E50B9D" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "298072DD-2F9B-48E3-9312-2B1BEB7B6B24",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "8af9dae8-c72c-054d-927d-2fcf4f1c3c81++505" : "..",
+    "CE4C6939770CB9C511A6FE216A04AE5308E50B9D" : "react-pocs\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "ios_MediaSocialSignIn",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "ios_MediaSocialSignIn\/ios\/ios_MediaSocialSignIn.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "http:\/\/cvs.mitrais.com:1197\/svn\/igotugot\/igotugot-ios",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "8af9dae8-c72c-054d-927d-2fcf4f1c3c81++505"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/mitrais-cdc-mobile\/react-pocs",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "CE4C6939770CB9C511A6FE216A04AE5308E50B9D"
+    }
+  ]
+}
