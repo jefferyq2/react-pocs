@@ -15,6 +15,10 @@ import PropertyView from './PropertyView';
 
 /** Responsible for rendering ListView which display search's results */
 class SearchResults extends Component {
+    /** Define this component's Id & Name */
+    static get Id() { return "SearchResults"; }    
+    static get Name() { return "Results"; }
+    
     constructor(props){
         super(props);
         let dataSource = new ListView.DataSource({
@@ -23,16 +27,19 @@ class SearchResults extends Component {
              */
             rowHasChanged: (r1, r2) => r1.guid !== r2.guid
         });
-        this.state = {
-            dataSource: dataSource.cloneWithRows(this.props.listings)
-        };
+        if (this.props.listings){
+            this.state = {
+                dataSource: dataSource.cloneWithRows(this.props.listings)
+            };
+        }
     }
     
     onRowTouched(touchedRow){
         // navigate to PropertyView and pass in the touchedRow
         this.props.navigator.push({
-            title: "Property Details",
+            title: PropertyView.Name,
             component: PropertyView,
+            id: PropertyView.Id,
             passProps: {property: touchedRow}
         });
     }
@@ -64,7 +71,8 @@ class SearchResults extends Component {
         console.log('[DEBUG] - SearchResults.render is called.');
         return(
             <ListView  dataSource={this.state.dataSource} 
-                       renderRow={this.onRenderRow.bind(this)}/>
+                       renderRow={this.onRenderRow.bind(this)}
+                       style={Styles.list}/>
         );
     }
 }

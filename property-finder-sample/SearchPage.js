@@ -11,6 +11,7 @@ import React, {
     Component
 } from 'react-native';
 
+import BusyIndicator from './BusyIndicator';
 import SearchResults from './SearchResults';
 
 /** Styles for SearchPage component */
@@ -43,6 +44,10 @@ let urlForQueryAndPage = (key, value, pageNumber) => {
  * The page that is displayed as the app's home view is a Search page
  */
 class SearchPage extends Component {
+    /** Define this component's Id & Name */
+    static get Id() { return "SearchPage"; }    
+    static get Name() { return "Property Finder"; }
+    
     /** Overriden constructor. A constructor takes props argument. 
      * We override this because we want to define states for this component 
      */
@@ -68,7 +73,7 @@ class SearchPage extends Component {
             .then(json => this._handleResponse(json.response))
             .catch(error => this.setState({
                 isLoading: false,
-                message: '[Something bad happened'+ error
+                message: `Something bad happened ${error.message}`
             }));
     }
     
@@ -84,7 +89,8 @@ class SearchPage extends Component {
             console.log('[DEBUG] Properties found: '+response.listings.length);
             /** Navigate to a view which display SearchResults component. It also push the results list into the view. */
             this.props.navigator.push({
-                title: "Results",
+                title: SearchResults.Name,
+                id: SearchResults.Id,
                 component: SearchResults,
                 passProps: {listings: response.listings}
             });
@@ -128,8 +134,8 @@ class SearchPage extends Component {
                 
     render(){
         console.log('[DEBUG] - SearchPage.render is called.');
-        // Create progress spinner , implemented by ActivityIndicatorIOS component, if isLoading is set as true.
-        var spinner = this.state.isLoading ? (<ActivityIndicatorIOS size='large'/>) : (<View/>);
+        // Create progress spinner , implemented by BusyIndicator component, if isLoading is set as true.        
+        var spinner = this.state.isLoading ? BusyIndicator : (<View/>);
         return (
             <View style={styles.container}>
                 <Text style={styles.description}>Search for houses to buy!</Text>

@@ -8,6 +8,10 @@ import React, {
 import Styles from './PropertyViewStyles';
 
 class PropertyView extends Component {
+    /** Define this component's Id & Name */
+    static get Id() { return "PropertyView"; }    
+    static get Name() { return "Property Details"; }
+    
     constructor(props) {
         super(props);
 
