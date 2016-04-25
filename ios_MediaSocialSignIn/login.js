@@ -11,8 +11,10 @@ import React, {
 } from 'react-native';
 
 const simpleAuthClient = require('./lib/simpleauthclient');
-const secrets = require('./secrets.example')
-const profile = require('./profile').default;
+const secrets = require('./secrets.example');
+const profile = require('./profile');
+
+import styles from './styles';
 
 class Login extends Component {
 
@@ -76,5 +78,7 @@ class Login extends Component {
         });
       });
   }
-
 }
+
+// Export Login class to outside world
+export default Login;
