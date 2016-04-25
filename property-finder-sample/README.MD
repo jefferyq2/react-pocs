@@ -4,10 +4,9 @@ This sample app is taken from an article hosted in RayWanderlich (https://www.ra
 
 **Done TODO Items**
 - Run the sample on Android as well (24/4/2016)
+- Modularise the project's structure. (25/4/2016)
 
 **TODO's Things to improve this sample**
-- Modularise the project's structure.
-- Improve responsive looks when the device's orientation is changed to Landscape position
 - Add welcome carousel view
 - Add Side bar menu
 - Add Signup by email & password
@@ -22,5 +21,6 @@ This sample app is taken from an article hosted in RayWanderlich (https://www.ra
 - Add Apple Watch app version
 - Add advertising
 - Add Mobile Analytic
+- Improve responsive looks when the device's orientation is changed to Landscape position
 - Deploy the sample to Google Play
 - Run the sample as Web SPA by using React.js
