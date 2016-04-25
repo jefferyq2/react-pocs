@@ -5,47 +5,94 @@
 
 import React, {
   AppRegistry,
+  PropTypes,
   Component,
   StyleSheet,
   Text,
-  View
+  View,
+  TouchableOpacity,
+  TouchableHightlight
 } from 'react-native';
 
-class GoogleSignup extends Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.android.js
-        </Text>
-        <Text style={styles.instructions}>
-          Shake or press menu button for dev menu
-        </Text>
-      </View>
-    );
-  }
-}
+import {GoogleSignin, GoogleSigninButton} from 'react-native-google-signin';
 
-const styles = StyleSheet.create({
+class GoogleSignup extends Component {
+  
+    constructor(props) {
+    super(props);
+    this.state = {
+      user: null
+    };
+   }
+   
+   componentDidMount() {
+    GoogleSignin.configure({
+      scopes: [],
+      //webClientId: '859208345663-gbg1h6hvr934pi77auusmq0jjkvvlg9d.apps.googleusercontent.com',
+      webClientId:'859208345663-roftlj4paprvbve6o73d9mml51dtcne5.apps.googleusercontent.com',
+      offlineAccess: true
+    });
+
+    GoogleSignin.currentUserAsync().then((user) => {
+      console.log('USER', user);
+      this.setState({user: user});
+    }).done();
+  }
+  
+  render() {
+      if (!this.state.user) {
+      return (
+        <View style={styles.container}>
+          <GoogleSigninButton style={{width: 120, height: 44}} color={GoogleSigninButton.Color.Light} size={GoogleSigninButton.Size.Icon} onPress={() => { this._signIn(); }}/>
+        </View>
+      );
+    }
+    
+       if (this.state.user) {
+      return (
+        <View style={styles.container}>
+          <Text style={{fontSize: 18, fontWeight: 'bold', marginBottom: 20}}>Welcome {this.state.user.name}</Text>
+          <Text>Your email is: {this.state.user.email}</Text>
+
+          <TouchableOpacity onPress={() => {this._signOut(); }}>
+            <View style={{marginTop: 50}}>
+              <Text>Log out</Text>
+            </View>
+          </TouchableOpacity>
+        </View>
+      );
+    }
+    
+    
+  }
+  
+   _signIn() {
+    GoogleSignin.signIn()
+    .then((user) => {
+      console.log(user);
+      this.setState({user: user});
+    })
+    .catch((err) => {
+      console.log('WRONG SIGNIN', err);
+    })
+    .done();
+  }
+  
+  _signOut() {
+    GoogleSignin.revokeAccess().then(() => GoogleSignin.signOut()).then(() => {
+      this.setState({user: null});
+    })
+    .done();
+  }
+};
+
+var styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
+  }
 });
 
 AppRegistry.registerComponent('GoogleSignup', () => GoogleSignup);
