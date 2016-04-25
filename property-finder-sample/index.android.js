@@ -10,10 +10,10 @@ import React, {
   Text
 } from 'react-native';
 
-import SearchPage from './SearchPage';
-import SearchResults from './SearchResults';
-import PropertyView from './PropertyView';
-import NavigationBackButton from './NavigationBackButton'; 
+import SearchPage from './app/modules/search-property/SearchPage';
+import SearchResults from './app/modules/property-list/SearchResults';
+import PropertyView from './app/modules/property-detail/PropertyView';
+import NavigationBackButton from './app/components/navigation-buttons/NavigationBackButton'; 
 
 /** Styles for Navigator */
 const styles = StyleSheet.create({

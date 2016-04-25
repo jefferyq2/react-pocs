@@ -11,8 +11,8 @@ import React, {
     Component
 } from 'react-native';
 
-import BusyIndicator from './BusyIndicator';
-import SearchResults from './SearchResults';
+import BusyIndicator from '../../components/busy-indicator/BusyIndicator';
+import SearchResults from '../property-list/SearchResults';
 
 /** Styles for SearchPage component */
 import styles from './SearchPage.Styles';
@@ -154,7 +154,7 @@ class SearchPage extends Component {
                 <TouchableHighlight onPress={this.onLocationPressed.bind(this)} style={styles.button} underlayColor='#99d9f4'>
                     <Text style={styles.buttonText}>Location</Text>
                 </TouchableHighlight> 
-                <Image source={require('./Resources/house.png')} stye={styles.image}/>
+                <Image source={require('../../../Resources/house.png')} stye={styles.image}/>
                 {spinner} 
                 <Text style={styles.description}>{this.state.message}</Text>
             </View>     

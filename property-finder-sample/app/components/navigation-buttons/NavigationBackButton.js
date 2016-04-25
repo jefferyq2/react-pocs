@@ -24,7 +24,7 @@ class NavigationBackButton extends Component{
         return (
             <TouchableOpacity style={styles.button} onPress={this.props.onPress}>
                 <View>
-                    <Image source={require('./Resources/left-arrow-24px.png')}/>                                    
+                    <Image source={require('../../../Resources/left-arrow-24px.png')}/>                                    
                 </View>
             </TouchableOpacity>
         );

@@ -8,7 +8,7 @@ import React, {
   StyleSheet
 } from 'react-native';
 
-import SearchPage from './SearchPage';
+import SearchPage from './app/modules/search-property/SearchPage';
 
 /** Styles for NavigatorIOS */
 const styles = StyleSheet.create({

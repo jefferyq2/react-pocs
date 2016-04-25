@@ -11,7 +11,7 @@ import React, {
 } from 'react-native';
 
 import Styles from './SearchResults.Styles';
-import PropertyView from './PropertyView';
+import PropertyView from '../property-detail/PropertyView';
 
 /** Responsible for rendering ListView which display search's results */
 class SearchResults extends Component {
