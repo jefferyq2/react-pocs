@@ -23,8 +23,8 @@
     jsCodeLocation = [NSURL URLWithString:@"http://localhost:8081/index.ios.bundle?platform=ios&dev=true"];
   #else
     #warning "DEBUG DEVICE"
-    //NSString *serverIP = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"SERVER_IP"];
-    NSString *serverIP = @"192.168.8.103";
+    NSString *serverIP = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"SERVER_IP"];
+    //NSString *serverIP = @"192.168.8.103";
     NSString *jsCodeUrlString = [NSString stringWithFormat:@"http://%@:8081/index.ios.bundle?platform=ios&dev=true", serverIP];
     NSString *jsBundleUrlString = [jsCodeUrlString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     jsCodeLocation = [NSURL URLWithString:jsBundleUrlString];
