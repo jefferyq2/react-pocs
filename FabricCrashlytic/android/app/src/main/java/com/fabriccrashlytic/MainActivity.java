@@ -1,5 +1,8 @@
 package com.fabriccrashlytic;
 
+import android.os.Bundle;
+
+import com.crashlytics.android.Crashlytics;
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
@@ -8,7 +11,15 @@ import com.smixx.fabric.FabricPackage;
 import java.util.Arrays;
 import java.util.List;
 
+import io.fabric.sdk.android.Fabric;
+
 public class MainActivity extends ReactActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        Fabric.with(this, new Crashlytics());
+    }
 
     /**
      * Returns the name of the main component registered from JavaScript.
