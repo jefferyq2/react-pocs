@@ -24,6 +24,7 @@
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		FBCCFDFB1CE2DF24006E9EB8 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBCCFDF91CE2DF24006E9EB8 /* Fabric.framework */; settings = {ASSET_TAGS = (); }; };
 		FBCCFDFC1CE2DF24006E9EB8 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBCCFDFA1CE2DF24006E9EB8 /* Crashlytics.framework */; settings = {ASSET_TAGS = (); }; };
+		FBCCFE091CE2E0C9006E9EB8 /* libSMXCrashlytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FBCCFE081CE2E0A4006E9EB8 /* libSMXCrashlytics.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +105,13 @@
 			remoteGlobalIDString = 58B5119B1A9E6C1200147676;
 			remoteInfo = RCTText;
 		};
+		FBCCFE071CE2E0A4006E9EB8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FBCCFE031CE2E0A4006E9EB8 /* SMXCrashlytics.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D8D9DB831C6D03DB009FBC0E;
+			remoteInfo = SMXCrashlytics;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -130,6 +138,7 @@
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		FBCCFDF91CE2DF24006E9EB8 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		FBCCFDFA1CE2DF24006E9EB8 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
+		FBCCFE031CE2E0A4006E9EB8 /* SMXCrashlytics.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SMXCrashlytics.xcodeproj; path = "../node_modules/react-native-fabric/ios/SMXCrashlytics.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +153,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBCCFE091CE2E0C9006E9EB8 /* libSMXCrashlytics.a in Frameworks */,
 				146834051AC3E58100842450 /* libReact.a in Frameworks */,
 				00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */,
 				00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */,
@@ -268,6 +278,7 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				FBCCFE031CE2E0A4006E9EB8 /* SMXCrashlytics.xcodeproj */,
 				146833FF1AC3E56700842450 /* React.xcodeproj */,
 				00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */,
 				00C302B51ABCB90400DB3ED1 /* RCTGeolocation.xcodeproj */,
@@ -309,6 +320,14 @@
 			children = (
 				13B07F961A680F5B00A75B9A /* FabricCrashlytic.app */,
 				00E356EE1AD99517003FC87E /* FabricCrashlyticTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FBCCFE041CE2E0A4006E9EB8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FBCCFE081CE2E0A4006E9EB8 /* libSMXCrashlytics.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -420,6 +439,10 @@
 					ProductGroup = 146834001AC3E56700842450 /* Products */;
 					ProjectRef = 146833FF1AC3E56700842450 /* React.xcodeproj */;
 				},
+				{
+					ProductGroup = FBCCFE041CE2E0A4006E9EB8 /* Products */;
+					ProjectRef = FBCCFE031CE2E0A4006E9EB8 /* SMXCrashlytics.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -498,6 +521,13 @@
 			fileType = archive.ar;
 			path = libRCTText.a;
 			remoteRef = 832341B41AAA6A8300B99B32 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FBCCFE081CE2E0A4006E9EB8 /* libSMXCrashlytics.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libSMXCrashlytics.a;
+			remoteRef = FBCCFE071CE2E0A4006E9EB8 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
