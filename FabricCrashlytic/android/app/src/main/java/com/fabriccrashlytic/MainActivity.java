@@ -3,6 +3,7 @@ package com.fabriccrashlytic;
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
+import com.smixx.fabric.FabricPackage;
 
 import java.util.Arrays;
 import java.util.List;
@@ -34,6 +35,7 @@ public class MainActivity extends ReactActivity {
     @Override
     protected List<ReactPackage> getPackages() {
         return Arrays.<ReactPackage>asList(
+                new FabricPackage(this),
             new MainReactPackage()
         );
     }
